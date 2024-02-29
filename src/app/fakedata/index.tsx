@@ -27,4 +27,22 @@ export const TABLE_ROWS = [
     ratingNumber: 3.8,
     modelo: "Honda Civic",
   },
+  {
+    id: 3,
+    carImage: "/img/carimage.png",
+    NextReservation: "11/07",
+    isAvailable: false,
+    statusText:'not available',
+    ratingNumber: 3.8,
+    modelo: "Honda Civic",
+  },
+  {
+    id: 4,
+    carImage: "/img/carimage.png",
+    NextReservation: "11/07",
+    isAvailable: false,
+    statusText:'not available',
+    ratingNumber: 3.8,
+    modelo: "Honda Civic",
+  },
 ];
