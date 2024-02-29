@@ -59,7 +59,8 @@ export default function DefaultTable() {
                   </TableHeadElement>
                   <TableHeadElement>
                     <Badge
-                      theme={themeCollors.Red}
+                      theme={themeCollors.Green}
+                      textColor="text-green-800"
                       isRemoveButton={false}
                       text={data.status}
                       type="only-icon"
@@ -69,7 +70,7 @@ export default function DefaultTable() {
                     <StaticRate />
                   </TableHeadElement>
                   <TableHeadElement>
-                    <span className="text-gray-800 text-sm cursor-pointer">
+                    <span className="text-gray-800 text-sm cursor-pointer text-center bg-red-200">
                       <HiDotsVertical />
                     </span>
                   </TableHeadElement>

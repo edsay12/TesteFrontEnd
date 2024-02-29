@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 function TableHead({ children }: { children: ReactNode }) {
   return (
-    <thead>
+    <thead className="bg-gray-50">
         {children}
       
     </thead>

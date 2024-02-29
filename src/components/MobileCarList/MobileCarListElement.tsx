@@ -13,7 +13,7 @@ type PropTypes = {
 
 function MobileCarListElement({ date, img, title }: PropTypes) {
   return (
-    <div className="flex gap-5 pt-2 pb-2 border max-w-[380px] w-full">
+    <div className="flex gap-5 p-5 border-solid border-b-2 border-gray-300 w-full">
       <div className="relative">
         <Image
           src={img}
