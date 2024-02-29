@@ -6,20 +6,42 @@ export const TABLE_HEAD = [
   "Actions",
 ];
 
+
+
 export const TABLE_ROWS = [
   {
     id: 1,
-    carImage: "/img/carImage.png",
+    carImage: "/img/carimage.png",
     NextReservation: "11/07",
-    status: "Available",
+    isAvailable:true ,
+    statusText:'available',
     ratingNumber: 4.5,
     modelo: "Toyota Corolla",
   },
   {
     id: 2,
-    carImage: "/img/carImage.png",
+    carImage: "/img/carimage.png",
     NextReservation: "11/07",
-    status: "Not available",
+    isAvailable: false,
+    statusText:'not available',
+    ratingNumber: 3.8,
+    modelo: "Honda Civic",
+  },
+  {
+    id: 3,
+    carImage: "/img/carimage.png",
+    NextReservation: "11/07",
+    isAvailable: false,
+    statusText:'not available',
+    ratingNumber: 3.8,
+    modelo: "Honda Civic",
+  },
+  {
+    id: 4,
+    carImage: "/img/carimage.png",
+    NextReservation: "11/07",
+    isAvailable: false,
+    statusText:'not available',
     ratingNumber: 3.8,
     modelo: "Honda Civic",
   },

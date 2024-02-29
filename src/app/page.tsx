@@ -59,10 +59,14 @@ export default function DefaultTable() {
                   </TableHeadElement>
                   <TableHeadElement>
                     <Badge
-                      theme={themeCollors.Green}
-                      textColor="text-green-800"
+                      theme={
+                        data.isAvailable ? themeCollors.Green : themeCollors.Red
+                      }
+                      textColor={
+                        data.isAvailable ? "text-gren-500" : "text-red-500"
+                      }
                       isRemoveButton={false}
-                      text={data.status}
+                      text={data.statusText}
                       type="only-icon"
                     />
                   </TableHeadElement>
@@ -85,6 +89,7 @@ export default function DefaultTable() {
         {TABLE_ROWS.map((data) => {
           return (
             <MobileCarListElement
+              isAvailable={data.isAvailable}
               key={data.id}
               date={data.NextReservation}
               img={data.carImage}
