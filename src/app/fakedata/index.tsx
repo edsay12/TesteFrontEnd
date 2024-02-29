@@ -9,7 +9,7 @@ export const TABLE_HEAD = [
 export const TABLE_ROWS = [
   {
     id: 1,
-    carImage: "https://example.com/car1.jpg",
+    carImage: "/img/carImage.png",
     NextReservation: "11/07",
     status: "Available",
     ratingNumber: 4.5,
@@ -17,7 +17,7 @@ export const TABLE_ROWS = [
   },
   {
     id: 2,
-    carImage: "https://example.com/car2.jpg",
+    carImage: "/img/carImage.png",
     NextReservation: "11/07",
     status: "Not available",
     ratingNumber: 3.8,

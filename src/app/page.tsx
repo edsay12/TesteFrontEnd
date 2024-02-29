@@ -7,16 +7,18 @@ import TableBody from "@/components/table/TableBody";
 import TableBodyElement from "@/components/table/TableBodyElement";
 import TableRow from "@/components/table/TableRow";
 import Image from "next/image";
-import carImage from "./assets/carImage.png";
+
 import Badge from "@/components/Badge/Badge";
 import { themeCollors } from "./types/ThemeColors";
 import StaticRate from "@/components/StaticRate";
-
+import { HiDotsVertical } from "react-icons/hi";
+import MobileCarListElement from "@/components/MobileCarList/MobileCarListElement";
+import MobileCarElementContainer from "@/components/MobileCarList/MobileCarElementContainer";
 
 export default function DefaultTable() {
   return (
     <Container>
-      <Table>
+      {/* <Table>
         <TableHead>
           <TableRow>
             {TABLE_HEAD.map((data) => {
@@ -37,7 +39,7 @@ export default function DefaultTable() {
                   <div className="flex gap-2 items-center">
                     <div>
                       <Image
-                        src={carImage}
+                        src={data.carImage}
                         alt=""
                         width={100}
                         height={100}
@@ -55,18 +57,33 @@ export default function DefaultTable() {
                   </div>
                 </TableHeadElement>
                 <TableHeadElement>
-                  
-                    <Badge theme={themeCollors.Red} isRemoveButton={false} text={data.status} type="only-icon" />
-                  
+                  <Badge
+                    theme={themeCollors.Red}
+                    isRemoveButton={false}
+                    text={data.status}
+                    type="only-icon"
+                  />
                 </TableHeadElement>
                 <TableHeadElement>
-                  <StaticRate/>
+                  <StaticRate />
+                </TableHeadElement>
+                <TableHeadElement>
+                 
+                  <span className="text-gray-800 text-sm cursor-pointer">
+                    <HiDotsVertical />
+                  </span>
                 </TableHeadElement>
               </TableRow>
             );
           })}
         </TableBody>
-      </Table>
+      </Table> */}
+
+      <MobileCarElementContainer>
+        {TABLE_ROWS.map((data) => {
+          return <MobileCarListElement key={data.id} date={data.NextReservation} img={data.carImage}  title={data.modelo}/>;
+        })}
+      </MobileCarElementContainer>
     </Container>
   );
 }

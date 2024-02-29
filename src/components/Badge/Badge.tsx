@@ -3,16 +3,18 @@ import { ReactNode } from "react";
 import { IoMdClose } from "react-icons/io";
 
 type PropTypes = {
-  text: string;
+  text?: string;
   type?: "basic" | "circle" | "only-icon";
   size?: "small" | "large";
   theme?: themeCollors; // imprementar depois
   ico?: ReactNode;
+  textColor?:string
   isRemoveButton?: boolean;
 };
 
 function Badge({
   ico,
+  textColor="",
   isRemoveButton,
   size = "small",
   text,
@@ -23,7 +25,7 @@ function Badge({
     if (ico) {
       return (
         <div
-          className={`${bgColor} ${size === "large" ? "p-2" : "p-1"} 
+          className={`${bgColor} ${textColor} ${size === "large" ? "p-2" : "p-1"} 
           
           text-xs font-medium  inline-block bg-contain   rounded-full`}
         >
@@ -37,7 +39,7 @@ function Badge({
     if (ico) {
       return (
         <div
-          className={`${bgColor} ${size === "large" ? "p-2" : "p-1"} 
+          className={`${bgColor} ${textColor}  ${size === "large" ? "p-2" : "p-1"} 
           
           text-xs font-medium  inline-block bg-contain   rounded-full`}
         >
@@ -49,7 +51,7 @@ function Badge({
 
   return (
     <div
-      className={`${bgColor} ${
+      className={`${bgColor} ${textColor} ${
         size === "large" ? "p-2" : "p-1"
       } text-xs font-medium  inline-block bg-contain  rounded-md `}
     >
