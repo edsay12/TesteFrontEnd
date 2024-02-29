@@ -8,6 +8,9 @@ import TableBodyElement from "@/components/table/TableBodyElement";
 import TableRow from "@/components/table/TableRow";
 import Image from "next/image";
 import carImage from "./assets/carImage.png";
+import Badge from "@/components/Badge/Badge";
+import { themeCollors } from "./types/ThemeColors";
+
 
 export default function DefaultTable() {
   return (
@@ -40,15 +43,20 @@ export default function DefaultTable() {
                         className="max-w-[48px]"
                       ></Image>
                     </div>
-                    <p className="text-gray-900 font-normal text-sm">
+                    <div className="text-gray-900 font-normal text-sm">
                       {data.modelo}
-                    </p>
+                    </div>
                   </div>
                 </TableBodyElement>
                 <TableHeadElement>
-                  <p className="text-sm font-normal text-gray-500">
+                  <div className="text-sm font-normal text-gray-500">
                     {data.NextReservation}
-                  </p>
+                  </div>
+                </TableHeadElement>
+                <TableHeadElement>
+                  <div className="text-sm font-normal text-gray-500">
+                    <Badge theme={themeCollors.Red} isRemoveButton={false} text={data.status} type="only-icon" />
+                  </div>
                 </TableHeadElement>
               </TableRow>
             );

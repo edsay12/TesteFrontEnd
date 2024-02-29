@@ -18,7 +18,8 @@ const config: Config = {
         green:{
           100:'#DEF7EC',
           800:'#03543F',
-        }
+        },
+        
       }
     },
   },
