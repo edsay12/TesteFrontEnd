@@ -18,70 +18,78 @@ import MobileCarElementContainer from "@/components/MobileCarList/MobileCarEleme
 export default function DefaultTable() {
   return (
     <Container>
-      {/* <Table>
-        <TableHead>
-          <TableRow>
-            {TABLE_HEAD.map((data) => {
-              return <TableHeadElement key={data}>{data}</TableHeadElement>;
-            })}
-          </TableRow>
-        </TableHead>
+      <div className="hidden md:inline">
+        <Table>
+          <TableHead>
+            <TableRow>
+              {TABLE_HEAD.map((data) => {
+                return <TableHeadElement key={data}>{data}</TableHeadElement>;
+              })}
+            </TableRow>
+          </TableHead>
 
-        <TableBody>
-          {TABLE_ROWS.map((data, index, list) => {
-            return (
-              <TableRow key={data.id}>
-                <TableBodyElement
-                  key={data.id}
-                  datalength={list.length}
-                  index={index}
-                >
-                  <div className="flex gap-2 items-center">
-                    <div>
-                      <Image
-                        src={data.carImage}
-                        alt=""
-                        width={100}
-                        height={100}
-                        className="max-w-[48px]"
-                      ></Image>
+          <TableBody>
+            {TABLE_ROWS.map((data, index, list) => {
+              return (
+                <TableRow key={data.id}>
+                  <TableBodyElement
+                    key={data.id}
+                    datalength={list.length}
+                    index={index}
+                  >
+                    <div className="flex gap-2 items-center">
+                      <div>
+                        <Image
+                          src={data.carImage}
+                          alt=""
+                          width={100}
+                          height={100}
+                          className="max-w-[48px]"
+                        ></Image>
+                      </div>
+                      <div className="text-gray-900 font-normal text-sm">
+                        {data.modelo}
+                      </div>
                     </div>
-                    <div className="text-gray-900 font-normal text-sm">
-                      {data.modelo}
+                  </TableBodyElement>
+                  <TableHeadElement>
+                    <div className="text-sm font-normal text-gray-500">
+                      {data.NextReservation}
                     </div>
-                  </div>
-                </TableBodyElement>
-                <TableHeadElement>
-                  <div className="text-sm font-normal text-gray-500">
-                    {data.NextReservation}
-                  </div>
-                </TableHeadElement>
-                <TableHeadElement>
-                  <Badge
-                    theme={themeCollors.Red}
-                    isRemoveButton={false}
-                    text={data.status}
-                    type="only-icon"
-                  />
-                </TableHeadElement>
-                <TableHeadElement>
-                  <StaticRate />
-                </TableHeadElement>
-                <TableHeadElement>
-                 
-                  <span className="text-gray-800 text-sm cursor-pointer">
-                    <HiDotsVertical />
-                  </span>
-                </TableHeadElement>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table> */}
+                  </TableHeadElement>
+                  <TableHeadElement>
+                    <Badge
+                      theme={themeCollors.Red}
+                      isRemoveButton={false}
+                      text={data.status}
+                      type="only-icon"
+                    />
+                  </TableHeadElement>
+                  <TableHeadElement>
+                    <StaticRate />
+                  </TableHeadElement>
+                  <TableHeadElement>
+                    <span className="text-gray-800 text-sm cursor-pointer">
+                      <HiDotsVertical />
+                    </span>
+                  </TableHeadElement>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </div>
 
       <MobileCarElementContainer>
         {TABLE_ROWS.map((data) => {
-          return <MobileCarListElement key={data.id} date={data.NextReservation} img={data.carImage}  title={data.modelo}/>;
+          return (
+            <MobileCarListElement
+              key={data.id}
+              date={data.NextReservation}
+              img={data.carImage}
+              title={data.modelo}
+            />
+          );
         })}
       </MobileCarElementContainer>
     </Container>
