@@ -10,6 +10,7 @@ import Image from "next/image";
 import carImage from "./assets/carImage.png";
 import Badge from "@/components/Badge/Badge";
 import { themeCollors } from "./types/ThemeColors";
+import StaticRate from "@/components/StaticRate";
 
 
 export default function DefaultTable() {
@@ -54,9 +55,12 @@ export default function DefaultTable() {
                   </div>
                 </TableHeadElement>
                 <TableHeadElement>
-                  <div className="text-sm font-normal text-gray-500">
+                  
                     <Badge theme={themeCollors.Red} isRemoveButton={false} text={data.status} type="only-icon" />
-                  </div>
+                  
+                </TableHeadElement>
+                <TableHeadElement>
+                  <StaticRate/>
                 </TableHeadElement>
               </TableRow>
             );

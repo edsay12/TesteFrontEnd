@@ -1,6 +1,5 @@
 import { themeCollors } from "@/app/types/ThemeColors";
 import { ReactNode } from "react";
-import { FaSackDollar } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 
 type PropTypes = {
@@ -33,7 +32,7 @@ function Badge({
       );
     }
   }
-  
+
   if (type === "circle") {
     if (ico) {
       return (
