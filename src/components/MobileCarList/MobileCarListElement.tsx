@@ -9,9 +9,10 @@ type PropTypes = {
   img: string;
   date: string;
   title: string;
+  isAvailable:boolean
 };
 
-function MobileCarListElement({ date, img, title }: PropTypes) {
+function MobileCarListElement({ date, img, title,isAvailable=false }: PropTypes) {
   return (
     <div className="flex gap-5 p-5 border-solid border-b-2 border-gray-300 w-full">
       <div className="relative">
@@ -24,7 +25,7 @@ function MobileCarListElement({ date, img, title }: PropTypes) {
         ></Image>
         <div className="absolute top-0 left-0">
           <Badge
-            theme={themeCollors.Green600}
+            theme={isAvailable ? themeCollors.Green600 : themeCollors.Red600}
             ico={<FaCheck />}
             type="circle"
             textColor="text-white"
